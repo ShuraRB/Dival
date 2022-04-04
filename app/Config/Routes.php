@@ -74,6 +74,9 @@ $routes->get('/eliminar_cliente/(:num)', 'Panel\Cliente::eliminar/$1', ['as' => 
 //Editar clientes
 $routes->get('/detalles_cliente/(:num)', 'Panel\Cliente_detalles::index/$1', ['as' => 'detalles_cliente']);
 $routes->post('/editar_cliente', 'Panel\Cliente_detalles::editar', ['as' => 'editar_cliente']);
+//Nuevo cliente
+$routes->get('/nuevo_cliente', 'Panel\Nuevo_cliente::index', ['as' => 'nuevo_cliente']);
+$routes->post('/registrar_cliente', 'Panel\Nuevo_cliente::registrar', ['as' => 'registrar_cliente']);
 /***************************************************************************************************************************/
 
 //Constantes Herramienta

@@ -80,21 +80,18 @@
             }//end else is_null
         }//end eliminar_archivo
 
-        // -----------------------------------------------------
-        // -----------------------------------------------------
         public function eliminar($id_cliente = 0) {
             //Cargamos el modelo correspondiente
             $tabla_cliente = new \App\Models\Tabla_cliente;
             //Query
             $cliente = $tabla_cliente->obtener_cliente($id_cliente); 
             if (!empty($cliente)) {
-                
                 //Se va a eliminar el usuario
                 if($tabla_cliente->delete($id_cliente)) {
                     mensaje("El cliente ha sido eliminado exitosamente", SUCCESS_ALERT);
                 }//end if eliminar
                 else {
-                    mensaje("Hubo un error al eliminar el cliente, intenta nuevamente", DANGER_ALERT);
+                    mensaje("Hubo un error al eliminar a este cliente, intenta nuevamente", DANGER_ALERT);
                 }//end else
 
             }//end if count
@@ -104,5 +101,4 @@
             //redirecciona al modulo de usuarios
             return redirect()->to(route_to('cliente'));
         }//end eliminar
-
     }//End Class Catalogo_samsung

@@ -21,8 +21,8 @@
                                 id_cliente, nombre, ap_p, ap_m, telefono, correo,
                                 empresa
                             ')
-                    // ->where('id_cliente', $id_cliente)
-                    // ->orderBy('', 'ASC')
+                    ->where('id_cliente >=',0)
+                    ->orderBy('id_cliente', 'ASC')
                     ->findAll();
              return $resultado;
         }//end data_table_celulares
