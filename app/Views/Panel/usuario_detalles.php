@@ -200,8 +200,8 @@
                             </div>
                         </div>
 
-                        <div class="text-center">
-                            <a class="btn btn-danger" id="bnt-cancelar" href="<?= route_to('usuarios'); ?>"><i class="fa fa-times"></i> Cancelar</a>
+                       <div class="text-center">
+                            <a class="btn btn-danger" id="bnt-cancelar" href="<?= route_to('usuario'); ?>"><i class="fa fa-times"></i> Cancelar</a>
                             <?php
                                 $btn_submit = array(
                                                     'name'    => 'btn_submit',

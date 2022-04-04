@@ -33,7 +33,7 @@
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>#</th>
+                            <th>#</th>
                                 <th>Nombre</th>
                                 <th>Cantidad</th>
                                 <th>Descripción</th>

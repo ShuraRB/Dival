@@ -18,7 +18,7 @@
         public function data_table_rg($id_rg = 0) {
             $resultado = $this
                     ->select('
-                                id_rg, nombre, cantidad, descripcion, proveedor, id_obra
+                                        id_rg, nombre, cantidad, descripcion, proveedor, id_obra
                             ')
                     ->where('id_rg >=',0)
                     ->orderBy('id_rg', 'ASC')
@@ -29,7 +29,7 @@
         public function obtener_rg($id_rg = 0){
             $resultado = $this
                         ->select('
-                                     id_rg, nombre, cantidad, descripcion, proveedor, id_obra
+                                        id_rg, nombre, cantidad, descripcion, proveedor, id_obra
                                 ')
                         ->where('id_rg', $id_rg)
                         ->first();
@@ -39,7 +39,7 @@
         public function rg_limit($limit) {
             $resultado = $this
                 ->select('
-                            id_rg, nombre, cantidad, descripcion, proveedor, id_obra
+                                        id_rg, nombre, cantidad, descripcion, proveedor, id_obra
                         ')
                 ->orderBy('nombre', 'ASC')
                 ->limit($limit)
@@ -50,7 +50,7 @@
         public function rg_actuales($fecha ='0000-00-00',$limit = 0) {
             $resultado = $this
                 ->select('
-                            id_rg, nombre, cantidad, descripcion, proveedor, id_obra    
+                                        id_rg, nombre, cantidad, descripcion, proveedor, id_obra   
                         ')
                 ->orderBy('nombre', 'ASC')
                 ->where('fecha',$fecha)

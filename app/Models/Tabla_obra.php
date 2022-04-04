@@ -11,14 +11,14 @@
 
         protected $allowedFields = [
                                     'id_obra', 'nombre', 'supervisor', 'descripcion', 
-                                     'id_cliente', 'fecha'
+                                    'presupuesto', 'costo_real','id_cliente', 'fecha'
                                     ];
         
         //Funciones que nos ayudaran a realizar peticiones (consultas) para obtener la información que deseemos
         public function data_table_obra($id_obra = 0) {
             $resultado = $this
                     ->select('
-                                id_obra, nombre, supervisor, descripcion, id_cliente
+                                id_obra, nombre, supervisor, descripcion, , presupuesto, costo_real, id_cliente
                             ')
                     ->where('id_obra >=',0)
                     ->orderBy('id_obra', 'ASC')
@@ -29,7 +29,7 @@
         public function obtener_obra($id_obra = 0){
             $resultado = $this
                         ->select('
-                                id_obra, nombre, supervisor, descripcion, id_cliente
+                                     id_obra, nombre, supervisor, descripcion, , presupuesto, costo_real, id_cliente
                                 ')
                         ->where('id_obra', $id_obra)
                         ->first();
@@ -39,7 +39,7 @@
         public function obra_limit($limit) {
             $resultado = $this
                 ->select('
-                                id_obra, nombre, supervisor, descripcion, id_cliente
+                                    id_obra, nombre, supervisor, descripcion, , presupuesto, costo_real, id_cliente
                         ')
                 ->orderBy('nombre', 'ASC')
                 ->limit($limit)
@@ -50,7 +50,7 @@
         public function obra_actuales($fecha ='0000-00-00',$limit = 0) {
             $resultado = $this
                 ->select('
-                                id_obra, nombre, supervisor, descripcion, id_cliente  
+                                    id_obra, nombre, supervisor, descripcion, , presupuesto, costo_real, id_cliente
                         ')
                 ->orderBy('nombre', 'ASC')
                 ->where('fecha',$fecha)

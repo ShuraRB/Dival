@@ -33,7 +33,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 
 //Default route
-$routes->get('/', 'Panel\Dashboard::index',['as' => 'dashboard']);
+$routes->get('/', 'Panel\Cliente::index',['as' => 'cliente']);
 
 
 /* --------------------------------------------------------------------
@@ -41,7 +41,7 @@ $routes->get('/', 'Panel\Dashboard::index',['as' => 'dashboard']);
 * --------------------------------------------------------------------*/
 /**   P A N E L   **/
 //Tarea dashboard
-$routes->get('/dashboard', 'Panel\Dashboard::index',['as' => 'dashboard']);
+// $routes->get('/dashboard', 'Panel\Dashboard::index',['as' => 'dashboard']);
 //Tarea usuario
 $routes->get('/acceso', 'Usuario\Acceso::index',['as' => 'acceso']);
 $routes->post('/validar_acceso','Usuario\Acceso::validar_acceso',['as'=>'validar_acceso']);
@@ -69,7 +69,7 @@ $routes->post('/editar_usuario', 'Panel\Usuario_detalles::editar', ['as' => 'edi
 /***************************************************************************************************************************/
 //Constantes Cliente
 //pagina y eliminar
-$routes->get('/cliente', 'Panel\Cliente::index', ['as' => 'cliente']);
+// $routes->get('/cliente', 'Panel\Cliente::index', ['as' => 'cliente']);
 $routes->get('/eliminar_cliente/(:num)', 'Panel\Cliente::eliminar/$1', ['as' => 'eliminar_cliente']);
 //Editar clientes
 $routes->get('/detalles_cliente/(:num)', 'Panel\Cliente_detalles::index/$1', ['as' => 'detalles_cliente']);

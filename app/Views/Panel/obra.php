@@ -26,6 +26,8 @@
                                 <th>Nombre</th>
                                 <th>Supervisor</th>
                                 <th>Descripción</th>
+                                <th>Presupuesto</th>
+                                <th>Costo_real</th>
                                 <th>Id Cliente</th>
                                 <th>Acción</th>
                             </tr>
@@ -36,6 +38,8 @@
                                 <th>Nombre</th>
                                 <th>Supervisor</th>
                                 <th>Descripción</th>
+                                <th>Presupuesto</th>
+                                <th>Costo_real</th>
                                 <th>Id Cliente</th>
                                 <th>Acción</th>
                             </tr>
@@ -51,6 +55,8 @@
                                             <td>'.$obra->nombre.'</td>
                                             <td>'.$obra->supervisor.'</td>
                                             <td>'.$obra->descripcion.'</td>
+                                            <td>$'.$obra->presupuesto.'</td>
+                                            <td>$'.$obra->costo_real.'</td>
                                             <td>'.$obra->id_cliente.'</td>
                                             <td>
                                                 <a href="'.route_to("detalles_obra",$obra->id_obra).'" class="btn btn-warning btn-icon-split btn-sm">
