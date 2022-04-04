@@ -39,30 +39,64 @@
         $menu_opcion = array();
         $menu_opcion['is_active'] = ($pagina_actual == TAREA_CLIENTE || $pagina_actual == TAREA_CLIENTE_NUEVO || $pagina_actual == TAREA_CLIENTE_DETALLES) ? TRUE : FALSE ;
         $menu_opcion['href'] = route_to('cliente');
-        $menu_opcion['text'] = 'cliente';
+        $menu_opcion['text'] = 'Cliente';
         $menu_opcion['icon'] = 'fa fa-address-book';
         $menu_opcion['submenu'] = array();
         $menu['cliente'] = $menu_opcion;
 
-
-        //Pagina Catalogo samsung
+        //Tarea Herramientas
         $menu_opcion = array();
-        $menu_opcion['is_active'] = ($pagina_actual == TAREA_CATALOGO) ? TRUE : FALSE ;
-        $menu_opcion['href'] = '#';
-        $menu_opcion['text'] = 'Catálogo';
-        $menu_opcion['icon'] = 'fa fa-book';
+        $menu_opcion['is_active'] = ($pagina_actual == TAREA_HERRAMIENTA || $pagina_actual == TAREA_HERRAMIENTA_NUEVO || $pagina_actual == TAREA_HERRAMIENTA_DETALLES) ? TRUE : FALSE ;
+        $menu_opcion['href'] = route_to('herramienta');
+        $menu_opcion['text'] = 'Herramienta';
+        $menu_opcion['icon'] = 'fa fa-tools';
         $menu_opcion['submenu'] = array();
-            $menu_sub_opcion = array();
-            $menu_sub_opcion['is_active'] = ($sub_pagina_actual == TAREA_CATALOGO_SAMSUNG) ? TRUE : FALSE ;
-            $menu_sub_opcion['href'] = route_to('catalogo_samsung_panel');
-            $menu_sub_opcion['text'] = 'Samsung';
-            $menu_opcion['submenu']['samsung'] = $menu_sub_opcion;
-            $menu_sub_opcion = array();
-            $menu_sub_opcion['is_active'] = ($sub_pagina_actual == TAREA_CATALOGO_CABALLERO) ? TRUE : FALSE ;
-            $menu_sub_opcion['href'] = route_to('catalogo_caballero_panel');
-            $menu_sub_opcion['text'] = 'Caballero';
-            $menu_opcion['submenu']['caballero'] = $menu_sub_opcion;
-        $menu['catalogo'] = $menu_opcion;
+        $menu['herramienta'] = $menu_opcion;
+
+        //Tarea MATERIAL
+        $menu_opcion = array();
+        $menu_opcion['is_active'] = ($pagina_actual == TAREA_MATERIAL || $pagina_actual == TAREA_MATERIAL_NUEVO || $pagina_actual == TAREA_MATERIAL_DETALLES) ? TRUE : FALSE ;
+        $menu_opcion['href'] = route_to('material');
+        $menu_opcion['text'] = 'Material';
+        $menu_opcion['icon'] = 'fa fa-address-book';
+        $menu_opcion['submenu'] = array();
+        $menu['material'] = $menu_opcion;
+
+        //Tarea obra
+        $menu_opcion = array();
+        $menu_opcion['is_active'] = ($pagina_actual == TAREA_OBRA || $pagina_actual == TAREA_OBRA_NUEVO || $pagina_actual == TAREA_OBRA_DETALLES) ? TRUE : FALSE ;
+        $menu_opcion['href'] = route_to('obra');
+        $menu_opcion['text'] = 'Obra';
+        $menu_opcion['icon'] = 'fa fa-address-book';
+        $menu_opcion['submenu'] = array();
+        $menu['obra'] = $menu_opcion;
+        
+        //Tarea RGr
+        $menu_opcion = array();
+        $menu_opcion['is_active'] = ($pagina_actual == TAREA_RG || $pagina_actual == TAREA_RG_NUEVO || $pagina_actual == TAREA_RG_DETALLES) ? TRUE : FALSE ;
+        $menu_opcion['href'] = route_to('rg');
+        $menu_opcion['text'] = 'Recursos Gastados';
+        $menu_opcion['icon'] = 'fa fa-address-book';
+        $menu_opcion['submenu'] = array();
+        $menu['rg'] = $menu_opcion;
+        // //Pagina Catalogo samsung
+        // $menu_opcion = array();
+        // $menu_opcion['is_active'] = ($pagina_actual == TAREA_CATALOGO) ? TRUE : FALSE ;
+        // $menu_opcion['href'] = '#';
+        // $menu_opcion['text'] = 'Catálogo';
+        // $menu_opcion['icon'] = 'fa fa-book';
+        // $menu_opcion['submenu'] = array();
+        //     $menu_sub_opcion = array();
+        //     $menu_sub_opcion['is_active'] = ($sub_pagina_actual == TAREA_CATALOGO_SAMSUNG) ? TRUE : FALSE ;
+        //     $menu_sub_opcion['href'] = route_to('catalogo_samsung_panel');
+        //     $menu_sub_opcion['text'] = 'Samsung';
+        //     $menu_opcion['submenu']['samsung'] = $menu_sub_opcion;
+        //     $menu_sub_opcion = array();
+        //     $menu_sub_opcion['is_active'] = ($sub_pagina_actual == TAREA_CATALOGO_CABALLERO) ? TRUE : FALSE ;
+        //     $menu_sub_opcion['href'] = route_to('catalogo_caballero_panel');
+        //     $menu_sub_opcion['text'] = 'Caballero';
+        //     $menu_opcion['submenu']['caballero'] = $menu_sub_opcion;
+        // $menu['catalogo'] = $menu_opcion;
 
         //Pagina Ofertas
         // $menu_opcion = array();

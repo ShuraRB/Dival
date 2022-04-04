@@ -79,14 +79,57 @@ $routes->get('/nuevo_cliente', 'Panel\Nuevo_cliente::index', ['as' => 'nuevo_cli
 $routes->post('/registrar_cliente', 'Panel\Nuevo_cliente::registrar', ['as' => 'registrar_cliente']);
 /***************************************************************************************************************************/
 
-//Constantes Herramienta
+/***************************************************************************************************************************/
+//Constantes herramienta
+//pagina y eliminar
+$routes->get('/herramienta', 'Panel\Herramienta::index', ['as' => 'herramienta']);
+$routes->get('/eliminar_herramienta/(:num)', 'Panel\Herramienta::eliminar/$1', ['as' => 'eliminar_herramienta']);
+//Editar clientes
+$routes->get('/detalles_herramienta/(:num)', 'Panel\Herramienta_detalles::index/$1', ['as' => 'detalles_herramienta']);
+$routes->post('/editar_herramienta', 'Panel\Herramienta_detalles::editar', ['as' => 'editar_herramienta']);
+//Nuevo cliente
+$routes->get('/nuevo_herramienta', 'Panel\Nuevo_herramienta::index', ['as' => 'nuevo_herramienta']);
+$routes->post('/registrar_herramienta', 'Panel\Nuevo_herramienta::registrar', ['as' => 'registrar_herramienta']);
+/***************************************************************************************************************************/
 
-//Constantes Materiales
+/***************************************************************************************************************************/
+//Constantes materiales
+//pagina y eliminar
+$routes->get('/material', 'Panel\Material::index', ['as' => 'material']);
+$routes->get('/eliminar_material/(:num)', 'Panel\Material::eliminar/$1', ['as' => 'eliminar_material']);
+//Editar clientes
+$routes->get('/detalles_material/(:num)', 'Panel\Material_detalles::index/$1', ['as' => 'detalles_material']);
+$routes->post('/editar_material', 'Panel\Material_detalles::editar', ['as' => 'editar_material']);
+//Nuevo cliente
+$routes->get('/nuevo_material', 'Panel\Nuevo_material::index', ['as' => 'nuevo_material']);
+$routes->post('/registrar_material', 'Panel\Nuevo_material::registrar', ['as' => 'registrar_material']);
+/***************************************************************************************************************************/
 
-//Constantes Obras
+/***************************************************************************************************************************/
+//Constantes obra
+//pagina y eliminar
+$routes->get('/obra', 'Panel\Obra::index', ['as' => 'obra']);
+$routes->get('/eliminar_obra/(:num)', 'Panel\Obra::eliminar/$1', ['as' => 'eliminar_obra']);
+//Editar clientes
+$routes->get('/detalles_obra/(:num)', 'Panel\Obra_detalles::index/$1', ['as' => 'detalles_obra']);
+$routes->post('/editar_obra', 'Panel\Obra_detalles::editar', ['as' => 'editar_obra']);
+//Nuevo cliente
+$routes->get('/nuevo_obra', 'Panel\Nuevo_obra::index', ['as' => 'nuevo_obra']);
+$routes->post('/registrar_obra', 'Panel\Nuevo_obra::registrar', ['as' => 'registrar_obra']);
+/***************************************************************************************************************************/
 
-//Constantes Recursos gastados
-
+/***************************************************************************************************************************/
+//Constantes rg
+//pagina y eliminar
+$routes->get('/rg', 'Panel\Rg::index', ['as' => 'rg']);
+$routes->get('/eliminar_rg/(:num)', 'Panel\Rg::eliminar/$1', ['as' => 'eliminar_rg']);
+//Editar clientes
+$routes->get('/detalles_rg/(:num)', 'Panel\Rg_detalles::index/$1', ['as' => 'detalles_rg']);
+$routes->post('/editar_rg', 'Panel\Rg_detalles::editar', ['as' => 'editar_rg']);
+//Nuevo cliente
+$routes->get('/nuevo_rg', 'Panel\Nuevo_rg::index', ['as' => 'nuevo_rg']);
+$routes->post('/registrar_rg', 'Panel\Nuevo_rg::registrar', ['as' => 'registrar_rg']);
+/***************************************************************************************************************************/
 
 
 

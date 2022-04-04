@@ -113,6 +113,18 @@ define("TAREA_USUARIO_DETALLES",'tarea_usuario_detalles');
 define("TAREA_CLIENTE",'tarea_cliente');
 define("TAREA_CLIENTE_NUEVO",'tarea_cliente_nuevo');
 define("TAREA_CLIENTE_DETALLES",'tarea_cliente_detalles');
+define("TAREA_HERRAMIENTA",'tarea_herramienta');
+define("TAREA_HERRAMIENTA_NUEVO",'tarea_herramienta_nuevo');
+define("TAREA_HERRAMIENTA_DETALLES",'tarea_herramienta_detalles');
+define("TAREA_MATERIAL",'tarea_material');
+define("TAREA_MATERIAL_NUEVO",'tarea_material_nuevo');
+define("TAREA_MATERIAL_DETALLES",'tarea_material_detalles');
+define("TAREA_OBRA",'tarea_obra');
+define("TAREA_OBRA_NUEVO",'tarea_obra_nuevo');
+define("TAREA_OBRA_DETALLES",'tarea_obra_detalles');
+define("TAREA_RG",'tarea_rg');
+define("TAREA_RG_NUEVO",'tarea_rg_nuevo');
+define("TAREA_RG_DETALLES",'tarea_rg_detalles');
 
 define("TAREA_CATALOGO",'tarea_catalogo');
 define("TAREA_CATALOGO_SAMSUNG",'tarea_catalogo_ samsung');
@@ -175,11 +187,18 @@ define("PERMISOS_ADMIN", array(
     TAREA_CLIENTE,
     TAREA_CLIENTE_NUEVO,
     TAREA_CLIENTE_DETALLES,
-    TAREA_CATALOGO,
-    TAREA_CATALOGO_SAMSUNG,
-    TAREA_CELULAR_DETALLES,
-    TAREA_CATALOGO_CABALLERO,
-    TAREA_OFERTA,
+    TAREA_HERRAMIENTA,
+    TAREA_HERRAMIENTA_NUEVO,
+    TAREA_HERRAMIENTA_DETALLES,
+    TAREA_MATERIAL,
+    TAREA_MATERIAL_NUEVO,
+    TAREA_MATERIAL_DETALLES,
+    TAREA_OBRA,
+    TAREA_OBRA_NUEVO,
+    TAREA_OBRA_DETALLES,    
+    TAREA_RG,
+    TAREA_RG_NUEVO,
+    TAREA_RG_DETALLES,  
     TAREA_PERFIL
 ));
 
@@ -188,11 +207,18 @@ define("PERMISOS_OPERADOR", array(
     TAREA_CLIENTE,
     TAREA_CLIENTE_NUEVO,
     TAREA_CLIENTE_DETALLES,
-    TAREA_CATALOGO,
-    TAREA_CATALOGO_SAMSUNG,
-    TAREA_CATALOGO_CABALLERO,
-    TAREA_OFERTA,
-    TAREA_CELULAR_DETALLES,
+    TAREA_HERRAMIENTA,
+    TAREA_HERRAMIENTA_NUEVO,
+    TAREA_HERRAMIENTA_DETALLES,
+    TAREA_MATERIAL,
+    TAREA_MATERIAL_NUEVO,
+    TAREA_MATERIAL_DETALLES,
+    TAREA_OBRA,
+    TAREA_OBRA_NUEVO,
+    TAREA_OBRA_DETALLES,    
+    TAREA_RG,
+    TAREA_RG_NUEVO,
+    TAREA_RG_DETALLES,    
     TAREA_PERFIL
 ));
 

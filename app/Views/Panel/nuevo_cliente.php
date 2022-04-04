@@ -146,7 +146,7 @@
                             </div>
                         </div>
 
-                       
+
                         <div class="text-center">
                             <a class="btn btn-danger" id="bnt-cancelar" href="<?= route_to('cliente'); ?>"><i class="fa fa-times"></i> Cancelar</a>
                             <?php

@@ -36,14 +36,14 @@ VALUES
 ('2', NULL, 'Alejandro', 'Huerta', 'Cote',1,NULL,'jahc@gm ail.com',SHA2('abc123',0),444),
 ('2', NULL, 'Patricia', 'Netzahuatl', 'Rugerio',1,NULL,'pextidevil@gmail.com',SHA2('abc123',0),784);
 
-CREATE TABLE cliente (
-    id_cliente INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE herramienta (
+    id_herramienta INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
-    ap_p VARCHAR(50) NOT NULL,
-    ap_m VARCHAR(50) NOT NULL,
-    telefono VARCHAR(50) NOT NULL,
-    correo VARCHAR(50) NOT NULL,
-    empresa VARCHAR(50) NOT NULL,
+    cantidad INT(10) NOT NULL,
+    descripcion TEXT NOT NULL,
+    proveedor VARCHAR(50) NOT NULL,
     fecha DATE NOT NULL
 )ENGINE=InnoDB;
+
+
 

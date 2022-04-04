@@ -3,7 +3,7 @@
     use App\Controllers\BaseController;
     use App\Libraries\Permisos;
 
-    class Cliente extends BaseController{
+    class Rg extends BaseController{
 
         private $session;
         private $permitido = TRUE;
@@ -14,8 +14,8 @@
             //instancia de la sesion
             $session = session();
             //Verifica si el usuario logeado cuenta con los permiso de esta area
-            if (acceso_usuario(TAREA_CLIENTE)) {
-                $session->tarea_actual = TAREA_CLIENTE;
+            if (acceso_usuario(TAREA_RG)) {
+                $session->tarea_actual = TAREA_RG;
             }//end if 
             else{
                 $this->permitido = FALSE;
@@ -28,7 +28,7 @@
             // dd($this->permitido);
             if($this->permitido){
                 // dd($this->permitido);
-                return $this->crear_vista("panel/cliente", $this->cargar_datos());
+                return $this->crear_vista("panel/Recursos_Gastados", $this->cargar_datos());
             }//end if rol permitido
             else{
                 mensaje("No tienes permiso para acceder a este módulo, contacte al administrador", WARNING_ALERT);
@@ -54,24 +54,24 @@
                                             : (($session->sexo_usuario == SEXO_FEMENINO) ? base_url(RECURSOS_CONTENIDO.'imagenes/usuarios/female.png') : base_url(RECURSOS_CONTENIDO.'imagenes/usuarios/male.jpg'));
             
             //Datos propios por vista y controlador
-            $datos['nombre_pagina'] = 'Cliente';
+            $datos['nombre_pagina'] = 'Recursos Gastados';
 
             //Cargamos el modelo correspondiente
-            $tabla_cliente = new \App\Models\Tabla_cliente;
-            $datos['cliente'] = $tabla_cliente->data_table_cliente($session->id_cliente);
+            $tabla_rg = new \App\Models\Tabla_rg;
+            $datos['rg'] = $tabla_rg->data_table_rg($session->id_rg);
 
             return $datos;
         }//end cargar_datos
 
         private function crear_vista($nombre_vista, $contenido = array()){
-            $contenido['menu'] = crear_menu_panel(TAREA_CLIENTE, '');
+            $contenido['menu'] = crear_menu_panel(TAREA_RG, '');
             return view($nombre_vista, $contenido);
         }//end crear_vista
 
         private function eliminar_archivo ($file = NULL){
             if (!empty($file)) {
-                if(file_exists(IMG_DIR_CLIENTE.'/'.$file)){
-                    unlink(IMG_DIR_CLIENTE.'/'.$file);
+                if(file_exists(IMG_DIR_RG.'/'.$file)){
+                    unlink(IMG_DIR_RG.'/'.$file);
                     return TRUE;
                 }//end if
             }//end if is_null
@@ -80,25 +80,25 @@
             }//end else is_null
         }//end eliminar_archivo
 
-        public function eliminar($id_cliente = 0) {
+        public function eliminar($id_rg = 0) {
             //Cargamos el modelo correspondiente
-            $tabla_cliente = new \App\Models\Tabla_cliente;
+            $tabla_rg = new \App\Models\Tabla_rg;
             //Query
-            $cliente = $tabla_cliente->obtener_cliente($id_cliente); 
-            if (!empty($cliente)) {
+            $rg = $tabla_rg->obtener_rg($id_rg); 
+            if (!empty($rg)) {
                 //Se va a eliminar el usuario
-                if($tabla_cliente->delete($id_cliente)) {
-                    mensaje("El cliente ha sido eliminado exitosamente", SUCCESS_ALERT);
+                if($tabla_rg->delete($id_rg)) {
+                    mensaje("El rg ha sido eliminado exitosamente", SUCCESS_ALERT);
                 }//end if eliminar
                 else {
-                    mensaje("Hubo un error al eliminar a este cliente, intenta nuevamente", DANGER_ALERT);
+                    mensaje("Hubo un error al eliminar a este rg, intenta nuevamente", DANGER_ALERT);
                 }//end else
 
             }//end if count
             else {
-                mensaje("El cliente que deseas eliminar no existe", WARNING_ALERT);
+                mensaje("El rg que deseas eliminar no existe", WARNING_ALERT);
             }//end else count
             //redirecciona al modulo de usuarios
-            return redirect()->to(route_to('cliente'));
+            return redirect()->to(route_to('rg'));
         }//end eliminar
     }//End Class Catalogo_samsung
