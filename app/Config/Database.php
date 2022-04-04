@@ -33,9 +33,9 @@ class Database extends Config
     public $default = [
         'DSN'      => '',
         'hostname' => 'localhost',
-        'username' => 'user_shurashop',
-        'password' => 'shura123',
-        'database' => 'shurashop_DB',
+        'username' => 'user_dival',
+        'password' => 'dival123',
+        'database' => 'dival_DB',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

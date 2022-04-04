@@ -35,6 +35,16 @@
         $menu_opcion['submenu'] = array();
         $menu['usuarios'] = $menu_opcion;
 
+        //Tarea Clientes
+        $menu_opcion = array();
+        $menu_opcion['is_active'] = ($pagina_actual == TAREA_CLIENTE || $pagina_actual == TAREA_CLIENTE_NUEVO || $pagina_actual == TAREA_CLIENTE_DETALLES) ? TRUE : FALSE ;
+        $menu_opcion['href'] = route_to('cliente');
+        $menu_opcion['text'] = 'cliente';
+        $menu_opcion['icon'] = 'fa fa-address-book';
+        $menu_opcion['submenu'] = array();
+        $menu['cliente'] = $menu_opcion;
+
+
         //Pagina Catalogo samsung
         $menu_opcion = array();
         $menu_opcion['is_active'] = ($pagina_actual == TAREA_CATALOGO) ? TRUE : FALSE ;
@@ -55,13 +65,13 @@
         $menu['catalogo'] = $menu_opcion;
 
         //Pagina Ofertas
-        $menu_opcion = array();
-        $menu_opcion['is_active'] = ($pagina_actual == TAREA_OFERTA) ? TRUE : FALSE ;
-        $menu_opcion['href'] = route_to('ofertas');
-        $menu_opcion['text'] = 'Ofertas';
-        $menu_opcion['icon'] = 'fa fa-address-book';
-        $menu_opcion['submenu'] = array();
-        $menu['ofertas'] = $menu_opcion;
+        // $menu_opcion = array();
+        // $menu_opcion['is_active'] = ($pagina_actual == TAREA_OFERTA) ? TRUE : FALSE ;
+        // $menu_opcion['href'] = route_to('ofertas');
+        // $menu_opcion['text'] = 'Ofertas';
+        // $menu_opcion['icon'] = 'fa fa-address-book';
+        // $menu_opcion['submenu'] = array();
+        // $menu['ofertas'] = $menu_opcion;
 
         return $menu;
     }//end configurar_menu_portal

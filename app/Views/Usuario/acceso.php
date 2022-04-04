@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login|Shurashop</title>
+    <title>Login|Construcciones Dival</title>
     <!-- Custom fonts for this template-->
     <link href="<?= base_url(RECURSOS_PANEL_VENDOR.'fontawesome-free/css/all.min.css');?>" rel="stylesheet" type="text/css">
     <link
@@ -48,11 +48,12 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-image: url(<?= base_url(RECURSOS_CONTENIDO.'imagenes/usuarios/login1.png');?>);"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-image: url(<?= base_url(RECURSOS_CONTENIDO.'imagenes/usuarios/login2.jpg');?>);"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                          <h1 class="h4 text-gray-900 mb-4">Bienvenido a Shurashop</h1>
+                                          <h1 class="h4 text-gray-900 mb-4">Bienvenido al</h1>
+                                          <h1 class="h4 text-gray-900 mb-4">Sistema de Inventario</h1>
                                           <h1 class="h4 text-gray-900 mb-4">Ingresa tus credenciales</h1>
                                     </div>
                                     <?= form_open('validar_acceso',["class"=>"user", "id"=>"formulario-acceso"]);?>
@@ -64,7 +65,7 @@
                                                     'name' => 'email',
                                                     'class' => 'form-control form-control-user',
                                                     'aria-describedby' => 'email',
-                                                    'placeholder' => 'ejemplo@gmail.com',
+                                                    'placeholder' => 'ejemplo@dival.com',
                                                 );
                                                 echo form_input($input);
                                             ?>
@@ -77,7 +78,7 @@
                                                     'name' => 'password',
                                                     'class' => 'form-control form-control-user',
                                                     'aria-describedby' => 'password',
-                                                    'placeholder' => '********',
+                                                    'placeholder' => 'Escribe tu contraseña',
                                                 );
                                                 echo form_input($input);
                                             ?>
@@ -95,9 +96,7 @@
                                         
                                     <?= form_close();?>
                                     <hr>
-                                    <a href="<?= route_to('inicio');?>" class="btn btn-google btn-user btn-block">
-                                        <i class="fab fa-google fa-fw"></i> Regresar a Inicio
-                                    </a>
+                                   
                                 </div>
                             </div>
                         </div>

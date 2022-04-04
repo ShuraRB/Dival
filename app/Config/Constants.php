@@ -110,8 +110,12 @@ define("TAREA_DASHBOARD",'tarea_dashboard');
 define("TAREA_USUARIOS",'tarea_usuarios');
 define("TAREA_USUARIO_NUEVO",'tarea_usuario_nuevo');
 define("TAREA_USUARIO_DETALLES",'tarea_usuario_detalles');
+define("TAREA_CLIENTE",'tarea_cliente');
+define("TAREA_CLIENTE_NUEVO",'tarea_cliente_nuevo');
+define("TAREA_CLIENTE_DETALLES",'tarea_cliente_detalles');
+
 define("TAREA_CATALOGO",'tarea_catalogo');
-define("TAREA_CATALOGO_SAMSUNG",'tarea_catalogo_samsung');
+define("TAREA_CATALOGO_SAMSUNG",'tarea_catalogo_ samsung');
 define("TAREA_CATALOGO_CABALLERO",'tarea_catalogo_caballero');
 define("TAREA_CELULAR_NUEVO",'tarea_celular_nuevo');
 define("TAREA_CELULAR_DETALLES",'tarea_celular_detalles');
@@ -139,8 +143,8 @@ define("ROL_SUPERADMIN",  array('nombre'=>'Superadmin',      'clave' => '784'));
 define("ROL_OPERADOR",    array('nombre'=>'Operador',        'clave' => '444'));
 
 define("ROLES", array(
-                        784 => 'Super Administrador',
-                        444 => 'Operador'
+                        784 => 'Operador',
+                        444 => 'Super Administrador'
                   ));
 
 define("SEXO", array(
@@ -168,6 +172,9 @@ define("PERMISOS_ADMIN", array(
     TAREA_USUARIOS,
     TAREA_USUARIO_NUEVO,
     TAREA_USUARIO_DETALLES,
+    TAREA_CLIENTE,
+    TAREA_CLIENTE_NUEVO,
+    TAREA_CLIENTE_DETALLES,
     TAREA_CATALOGO,
     TAREA_CATALOGO_SAMSUNG,
     TAREA_CELULAR_DETALLES,
@@ -178,6 +185,9 @@ define("PERMISOS_ADMIN", array(
 
 define("PERMISOS_OPERADOR", array(
     TAREA_DASHBOARD,
+    TAREA_CLIENTE,
+    TAREA_CLIENTE_NUEVO,
+    TAREA_CLIENTE_DETALLES,
     TAREA_CATALOGO,
     TAREA_CATALOGO_SAMSUNG,
     TAREA_CATALOGO_CABALLERO,
@@ -213,4 +223,4 @@ define("RECURSOS_CONTENIDO_PLUGINS", "recursos_contenido/plugins/");
 
 //RUTAS PARA LAS IMAGENES
 define("IMG_DIR_USUARIOS","recursos_contenido/imagenes/usuarios");
-define("IMG_DIR_CELULARES","recursos_contenido/imagenes/celulares/");
+define("IMG_DIR_CLIENTE","recursos_contenido/imagenes/cliente/");

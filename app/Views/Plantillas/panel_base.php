@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $nombre_pagina ;?> | Shurashop</title>
+    <title><?= $nombre_pagina ;?> | Construcciones Dival</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url(RECURSOS_PANEL_VENDOR. 'fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
@@ -17,6 +17,7 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/1ad88c7642.js" crossorigin="anonymous" rel="stylesheet" type="text/css"></script>
     <!-- Custom styles for this template-->
     <link href="<?= base_url(RECURSOS_PANEL_CSS. 'sb-admin-2.min.css') ?>" rel="stylesheet">
     <!-- ============================================================== -->
@@ -36,9 +37,9 @@
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                     <div class="sidebar-brand-icon rotate-n-15">
-                        <i class="fas fa-laugh-wink"></i>
+                        
                     </div>
-                    <div class="sidebar-brand-text mx-3">ShuraShop</div>
+                    <div class="sidebar-brand-text mx-3">Construcciones Dival</div>
                 </a>
                 <!-- MENU LATERAL -->
                 <?= $menu; ?>

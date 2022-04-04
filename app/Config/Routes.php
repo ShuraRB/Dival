@@ -33,17 +33,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 
 //Default route
-$routes->get('/', 'Portal\Inicio::index',['as' => 'inicio']);
-
-/**   P O R T A L   **/
-/* --------------------------------------------------------------------
-* PORTAL
-* --------------------------------------------------------------------*/
-$routes->get('/', 'Portal/Inicio::index', ['as'=>'Inicio']);
-$routes->get('/samsung', 'Portal/Samsung::index', ['as'=>'Samsung']);
-$routes->get('/apple', 'Portal/Apple::index', ['as'=>'Apple']);
-$routes->get('/galeria', 'Portal/Galeria::index', ['as'=>'Galeria']);
-$routes->get('/contacto', 'Portal/Contacto::index', ['as'=>'Contacto']);
+$routes->get('/', 'Panel\Dashboard::index',['as' => 'dashboard']);
 
 
 /* --------------------------------------------------------------------
@@ -67,8 +57,6 @@ $routes->get('/cerrar_sesion', 'Usuario\Cerrar_sesion::index',['as' => 'cerrar_s
 
 ///Usuarios
 //CONSTANTES DEL PANEL
-//Dashboard
-$routes->get('/dashboard', 'Panel\Dashboard::index', ['as' => 'dashboard']);
 //Usuarios
 $routes->get('/usuarios', 'Panel\Usuarios::index', ['as' => 'usuarios']);
 $routes->get('/eliminar_usuario/(:num)', 'Panel\Usuarios::eliminar/$1', ['as' => 'eliminar_usuario']);
@@ -78,12 +66,41 @@ $routes->post('/registrar_usuario', 'Panel\Usuario_nuevo::registrar', ['as' => '
 $routes->get('/detalles_usuario/(:num)', 'Panel\Usuario_detalles::index/$1', ['as' => 'detalles_usuario']);
 $routes->post('/editar_usuario', 'Panel\Usuario_detalles::editar', ['as' => 'editar_usuario']);
 
-//Catalogo sAMSUNG
-$routes->get('/catalogo_samsung_panel', 'Panel\Catalogo_samsung::index', ['as' => 'catalogo_samsung_panel']);
-$routes->get('/eliminar_celular_samsung/(:num)', 'Panel\Catalogo_samsung::eliminar/$1', ['as' => 'eliminar_celular_samsung']);
-//Editar Samsung
-$routes->get('/detalles_celular/(:num)', 'Panel\Celular_detalles::index/$1', ['as' => 'detalles_celular']);
-$routes->post('/editar_celular', 'Panel\Celular_detalles::editar', ['as' => 'editar_celular']);
+/***************************************************************************************************************************/
+//Constantes Cliente
+//pagina y eliminar
+$routes->get('/cliente', 'Panel\Cliente::index', ['as' => 'cliente']);
+$routes->get('/eliminar_cliente/(:num)', 'Panel\Cliente::eliminar/$1', ['as' => 'eliminar_cliente']);
+//Editar clientes
+$routes->get('/detalles_cliente/(:num)', 'Panel\Cliente_detalles::index/$1', ['as' => 'detalles_cliente']);
+$routes->post('/editar_cliente', 'Panel\Cliente_detalles::editar', ['as' => 'editar_cliente']);
+/***************************************************************************************************************************/
+
+//Constantes Herramienta
+
+//Constantes Materiales
+
+//Constantes Obras
+
+//Constantes Recursos gastados
+
+
+
+
+
+
+
+
+/**   P O R T A L   **/
+/* --------------------------------------------------------------------
+* PORTAL
+* --------------------------------------------------------------------*/
+// $routes->get('/', 'Portal/Inicio::index', ['as'=>'Inicio']);
+// $routes->get('/samsung', 'Portal/Samsung::index', ['as'=>'Samsung']);
+// $routes->get('/apple', 'Portal/Apple::index', ['as'=>'Apple']);
+// $routes->get('/galeria', 'Portal/Galeria::index', ['as'=>'Galeria']);
+// $routes->get('/contacto', 'Portal/Contacto::index', ['as'=>'Contacto']);
+
 
 //
 /*
